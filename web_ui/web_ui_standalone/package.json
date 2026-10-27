@@ -1,0 +1,12 @@
+{
+  "name": "web-ui-standalone",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "cases": "node web_ui_run.mjs --list",
+    "test": "node --test ../test_web_ui_desktop.mjs ../test_web_ui_observation.mjs"
+  },
+  "dependencies": {
+    "playwright": "1.62.1"
+  }
+}

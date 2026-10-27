@@ -1,0 +1,171 @@
+{
+  "test_url": "https://test.randomvideochat-talk.pages.dev/",
+  "prod_url": null,
+  "disabled_cases": {"S-10": "免费一分钟停用"},
+  "test_membership_seconds": 300,
+  "test_membership_recovery": {
+    "url": "https://sj-app-down.jm.ijunj.com/#memberSubscription",
+    "duration": 864000
+  },
+  "call_billing": {
+    "coins_per_minute": 80,
+    "verification_seconds": 60,
+    "max_spend_seconds": 600,
+    "max_anchor_attempts": 3
+  },
+  "report_branding": {
+    "logo": "assets/web_ui_logo.png"
+  },
+  "platform_rules": {
+    "android": {
+      "paused_case_ids": ["S-04", "S-05", "S-06"],
+      "pause_reason": "用户要求Android的S-04至S-06暂时跳过，等待后续明确需求",
+      "skip_unavailable_call_targets": true,
+      "case_overrides": {
+        "M-13": {
+          "steps": ["游客匹配进入可输入消息的通话页面", "发送简短英文问候", "核对消息显示及输入框清空"],
+          "expected": ["消息成功显示在通话聊天区"]
+        },
+        "M-14": {
+          "steps": ["游客匹配进入双视频窗口页面", "记录两路窗口位置，点击自己的小窗", "比较点击前后两路窗口尺寸及位置"],
+          "expected": ["自己与对方视频的大小位置交换"]
+        },
+        "S-09": {
+          "expected": ["普通通话每分钟向上取整扣80金币；无可用在线主播或有限尝试后未接通则跳过，不按拨号等待计费"]
+        }
+      }
+    },
+    "web": {
+      "excluded_case_ids": [
+        "L-14",
+        "N-01",
+        "L-20",
+        "L-11",
+        "G-11",
+        "L-05"
+      ],
+      "permissions_evidence": "实际进入匹配连接页可证明摄像头及麦克风已授权；不要求捕获浏览器下落通知",
+      "case_overrides": {
+        "N-02": {
+          "title": "PC权限说明点击Enjoy完成引导",
+          "steps": [
+            "在PC权限说明中按可见步骤点击How Can I Provide Permission?及Next",
+            "点击Enjoy，等待说明关闭并检查Match恢复可操作"
+          ],
+          "expected": [
+            "点击Enjoy完成PC权限说明；不要求Try Again；关闭引导不代表音视频已经授权"
+          ]
+        },
+        "N-03": {
+          "title": "PC匹配确认音视频已授权",
+          "steps": [
+            "进入PC Match并点击Start matching",
+            "检查实际进入匹配连接页或视频会话，保存页面证据"
+          ],
+          "expected": [
+            "实际进入匹配连接页或视频会话证明音视频权限已授权；不要求捕获浏览器下落通知"
+          ]
+        },
+        "N-10": {
+          "title": "PC未订阅送礼按余额判断",
+          "steps": [
+            "刷新Profile确认未订阅并记录金币余额",
+            "实际进入匹配连接页确认音视频已授权",
+            "通话中发送星星礼物，立即采集提示"
+          ],
+          "expected": [
+            "进入匹配连接页证明PC音视频已授权",
+            "未订阅但余额足够时发送成功并扣除礼物金额；余额不足时发送失败并提示金币不足"
+          ]
+        },
+        "G-10": {
+          "title": "PC拒绝音视频权限后的说明引导",
+          "steps": [
+            "触发Chrome音视频权限请求并点击不允许",
+            "检查Important Tips及How Can I Provide Permission?入口"
+          ],
+          "expected": [
+            "显示Important Tips和How Can I Provide Permission?；PC不要求Try Again"
+          ]
+        },
+        "G-12": {
+          "title": "PC允许权限后的重新加载提示",
+          "steps": [
+            "在Chrome站点面板将摄像头和麦克风改为允许",
+            "检查顶部重新加载提示，点击重新加载并确认页面恢复"
+          ],
+          "expected": [
+            "Chrome显示“重新加载此页面，即可在该网站上应用更新后的设置”和“重新加载”按钮"
+          ]
+        },
+        "L-04": {
+          "title": "新用户接听首次欢迎来电",
+          "steps": [
+            "登录后同步观察Chat的Official消息和欢迎来电，任一正证据确认新用户",
+            "首次来电捕获后立即点击Join/Answer，不等待第二次来电",
+            "确认来电弹窗关闭且视频实际加载，保存证据并退出通话"
+          ],
+          "expected": [
+            "新用户三分钟内出现欢迎来电，接听首次来电后进入视频界面；老用户跳过"
+          ]
+        },
+        "L-06": {
+          "steps": [
+            "Official有消息或欢迎来电视为新用户，本项跳过",
+            "只有完整30秒未发现Official消息的老用户继续观察三分钟"
+          ],
+          "expected": [
+            "仅老用户执行；观察窗口内没有新注册欢迎来电"
+          ]
+        },
+        "S-05": {
+          "title": "PC非首次Video且无金币",
+          "steps": [
+            "确认实际会员有效、已处理首次Video，记录余额",
+            "使用带明确价格的真实通话或礼物消费准备0金币，记录每次消费；不通过后台改金币",
+            "余额0后再次点击Discover的Video"
+          ],
+          "expected": [
+            "非首次且0金币时出现无金币提示；未达到0或未取得有效会员证据则阻塞"
+          ]
+        },
+        "S-09": {
+          "title": "普通视频通话按分钟向上取整扣费",
+          "steps": [
+            "确认会员有效并记录通话前金币",
+            "接通普通80/min通话，记录实际通话计时（至少一分钟且不足两分钟）",
+            "正常挂断后刷新Profile，核对按分钟向上取整的扣费"
+          ],
+          "expected": [
+            "按不足一分钟算一分钟扣费；70秒应扣2×80=160金币；拨号等待不计通话时长"
+          ]
+        },
+        "L-25": {
+          "title": "选择标签并逐次等待接口保存",
+          "steps": [
+            "进入Profile，记录未选标签和当前n/6计数",
+            "点击一个标签，确认对应保存接口请求完成且HTTP成功，核对高亮和计数增加",
+            "两次点击至少间隔1.5秒；上一请求未完成不点击下一项",
+            "刷新Profile，确认已选择标签与计数仍然保持"
+          ],
+          "expected": [
+            "每次点击均有对应保存请求；逐次完成后标签高亮、计数正确增加，刷新后保存成功"
+          ]
+        },
+        "S-04": {
+          "title": "清理本站缓存后首次Video显示余额",
+          "steps": [
+            "记录当前账号主对象data.uuid，清理当前被测源的页面缓存及本地业务状态，保留设备标识和认证Cookie/IndexedDB",
+            "刷新页面，复核账号UUID相同、Profile已登录且会员有效；若退出登录先重新登录同一账号再继续",
+            "首次点击Discover的Video，保存余额弹窗和当前金币证据"
+          ],
+          "expected": [
+            "本次首次Video前完成同源缓存清理及账号/会员复核，弹出的Balance金额与当前金币一致；前置不完整时不点击Video"
+          ]
+        }
+      },
+      "tag_click_interval_ms": 1500,
+      "account_details_path": "/web/v1/accounts/details"
+    }
+  }
+}

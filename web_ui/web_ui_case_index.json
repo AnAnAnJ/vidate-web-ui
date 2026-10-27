@@ -1,0 +1,2678 @@
+[
+  {
+    "id": "G-03",
+    "module": "游客 Discover",
+    "title": "All / Video / Text 切换",
+    "definition": {
+      "file": "web_ui_full_rerun.py",
+      "line": 28,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 704
+        }
+      },
+      "android": {
+        "file": "web_ui_full_rerun.py",
+        "line": 289,
+        "method": "tabs",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_full_rerun.py",
+        "line": 289,
+        "method": "tabs",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "以网页未登录游客打开 Discover",
+      "依次切换 Video、Text、All，核对选中状态和页面可操作性"
+    ],
+    "expected": [
+      "三个标签均能切换，无异常弹窗或页面错误"
+    ]
+  },
+  {
+    "id": "G-04",
+    "module": "游客 Discover",
+    "title": "用户卡片存在",
+    "definition": {
+      "file": "web_ui_full_rerun.py",
+      "line": 29,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 704
+        }
+      },
+      "android": {
+        "file": "web_ui_full_rerun.py",
+        "line": 306,
+        "method": "card_case",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_full_rerun.py",
+        "line": 306,
+        "method": "card_case",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "打开游客 Discover",
+      "检查用户卡片和操作入口"
+    ],
+    "expected": [
+      "存在用户卡片，可见用户信息、Say Hi 和 Video"
+    ]
+  },
+  {
+    "id": "G-05",
+    "module": "游客 Discover",
+    "title": "下滑列表五次",
+    "definition": {
+      "file": "web_ui_full_rerun.py",
+      "line": 30,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 704
+        }
+      },
+      "android": {
+        "file": "web_ui_full_rerun.py",
+        "line": 311,
+        "method": "scroll_case",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_full_rerun.py",
+        "line": 311,
+        "method": "scroll_case",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "在 Discover 连续向上滑动列表五次",
+      "核对列表内容、末尾和导航"
+    ],
+    "expected": [
+      "五次滑动正常，列表可操作，数据用尽时展示末尾状态"
+    ]
+  },
+  {
+    "id": "G-06",
+    "module": "游客 Discover",
+    "title": "卡片 Say Hi 触发登录",
+    "definition": {
+      "file": "web_ui_full_rerun.py",
+      "line": 31,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 705
+        }
+      },
+      "android": {
+        "file": "web_ui_full_rerun.py",
+        "line": 323,
+        "method": "guest_action",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_full_rerun.py",
+        "line": 323,
+        "method": "guest_action",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "游客打开 Discover 用户列表",
+      "点击任意用户卡片上的 Say Hi"
+    ],
+    "expected": [
+      "弹出登录弹窗"
+    ]
+  },
+  {
+    "id": "G-07",
+    "module": "游客 Discover",
+    "title": "卡片 Video 触发登录",
+    "definition": {
+      "file": "web_ui_full_rerun.py",
+      "line": 32,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 705
+        }
+      },
+      "android": {
+        "file": "web_ui_full_rerun.py",
+        "line": 323,
+        "method": "guest_action",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_full_rerun.py",
+        "line": 323,
+        "method": "guest_action",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "游客打开 Discover 用户列表",
+      "点击任意用户卡片上的 Video"
+    ],
+    "expected": [
+      "弹出登录弹窗"
+    ]
+  },
+  {
+    "id": "G-10",
+    "module": "游客 Match 权限",
+    "title": "拒绝音视频权限",
+    "definition": {
+      "file": "web_ui_full_rerun.py",
+      "line": 33,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 729
+        },
+        "case_override": {
+          "title": "PC拒绝音视频权限后的说明引导",
+          "steps": [
+            "触发Chrome音视频权限请求并点击不允许",
+            "检查Important Tips及How Can I Provide Permission?入口"
+          ],
+          "expected": [
+            "显示Important Tips和How Can I Provide Permission?；PC不要求Try Again"
+          ]
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 217,
+        "method": "permissions",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 217,
+        "method": "permissions",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "进入 Match，触发浏览器音视频权限请求",
+      "点击不允许"
+    ],
+    "expected": [
+      "显示需要开启权限的提示和 Try Again"
+    ]
+  },
+  {
+    "id": "G-11",
+    "module": "游客 Match 权限",
+    "title": "Try Again 重新请求权限",
+    "definition": {
+      "file": "web_ui_full_rerun.py",
+      "line": 34,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "status": "PC已移除；Android/iOS继续保留"
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 217,
+        "method": "permissions",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 217,
+        "method": "permissions",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "在拒绝后的提示中点击 Try Again"
+    ],
+    "expected": [
+      "页面刷新，再次显示权限请求"
+    ]
+  },
+  {
+    "id": "G-12",
+    "module": "游客 Match 权限",
+    "title": "允许权限后的下落通知",
+    "definition": {
+      "file": "web_ui_full_rerun.py",
+      "line": 35,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 729
+        },
+        "case_override": {
+          "title": "PC允许权限后的重新加载提示",
+          "steps": [
+            "在Chrome站点面板将摄像头和麦克风改为允许",
+            "检查顶部重新加载提示，点击重新加载并确认页面恢复"
+          ],
+          "expected": [
+            "Chrome显示“重新加载此页面，即可在该网站上应用更新后的设置”和“重新加载”按钮"
+          ]
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 217,
+        "method": "permissions",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 217,
+        "method": "permissions",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "在权限请求中点击允许",
+      "立即观察 Chrome 顶部通知"
+    ],
+    "expected": [
+      "出现已授予摄像头和麦克风使用权的浏览器内置下落通知"
+    ]
+  },
+  {
+    "id": "M-09",
+    "module": "游客 Match",
+    "title": "顶部三个标签切换",
+    "definition": {
+      "file": "web_ui_full_rerun.py",
+      "line": 36,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 706
+        }
+      },
+      "android": {
+        "file": "web_ui_full_rerun.py",
+        "line": 344,
+        "method": "match_nav",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_full_rerun.py",
+        "line": 344,
+        "method": "match_nav",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "在 Match 依次切换 women、men、All"
+    ],
+    "expected": [
+      "对应选项被选中，页面可操作"
+    ]
+  },
+  {
+    "id": "M-10",
+    "module": "游客 Match",
+    "title": "中间 Discover 跳转",
+    "definition": {
+      "file": "web_ui_full_rerun.py",
+      "line": 37,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 707
+        }
+      },
+      "android": {
+        "file": "web_ui_full_rerun.py",
+        "line": 344,
+        "method": "match_nav",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_full_rerun.py",
+        "line": 344,
+        "method": "match_nav",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "在 Match 点击中间 Discover"
+    ],
+    "expected": [
+      "进入 Discover 列表"
+    ]
+  },
+  {
+    "id": "M-11",
+    "module": "游客 Match",
+    "title": "启动匹配进入连接页",
+    "definition": {
+      "file": "web_ui_full_rerun.py",
+      "line": 38,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 730
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 412,
+        "method": "matching_exit",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 412,
+        "method": "matching_exit",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "确认游客有可用匹配次数",
+      "点击 Start matching 一次"
+    ],
+    "expected": [
+      "进入匹配连接页"
+    ]
+  },
+  {
+    "id": "M-12",
+    "module": "游客 Match",
+    "title": "搜索中 Exit 与扣次",
+    "definition": {
+      "file": "web_ui_full_rerun.py",
+      "line": 39,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 708
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 412,
+        "method": "matching_exit",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 412,
+        "method": "matching_exit",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "记录匹配前次数",
+      "启动匹配后在搜索中点击 Exit",
+      "检查返回和剩余次数"
+    ],
+    "expected": [
+      "返回 Match，剩余次数减一"
+    ]
+  },
+  {
+    "id": "M-13",
+    "module": "游客通话",
+    "title": "发送简短英文问候",
+    "definition": {
+      "file": "web_ui_full_rerun.py",
+      "line": 40,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 709
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 448,
+        "method": "conversation",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 448,
+        "method": "conversation",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "游客匹配成功进入通话",
+      "输入简短英文问候并发送"
+    ],
+    "expected": [
+      "消息成功显示在通话聊天区"
+    ]
+  },
+  {
+    "id": "M-14",
+    "module": "游客通话",
+    "title": "点击自己的小窗切换视频",
+    "definition": {
+      "file": "web_ui_full_rerun.py",
+      "line": 41,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 731
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 448,
+        "method": "conversation",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 448,
+        "method": "conversation",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "游客匹配成功进入双视频通话",
+      "记录两路视频位置，点击自己的小窗"
+    ],
+    "expected": [
+      "自己与对方视频的大小位置交换"
+    ]
+  },
+  {
+    "id": "G-17",
+    "module": "游客 Profile",
+    "title": "Profile 触发登录",
+    "definition": {
+      "file": "web_ui_full_rerun.py",
+      "line": 42,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 705
+        }
+      },
+      "android": {
+        "file": "web_ui_full_rerun.py",
+        "line": 332,
+        "method": "guest_profile",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_full_rerun.py",
+        "line": 332,
+        "method": "guest_profile",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "游客点击 Profile"
+    ],
+    "expected": [
+      "弹出登录弹窗"
+    ]
+  },
+  {
+    "id": "L-01",
+    "module": "登录",
+    "title": "登录弹窗的两个协议正文非空",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 4,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_standalone/web_ui_run.mjs",
+        "line": 49,
+        "method": "executeCases"
+      },
+      "android": {
+        "file": "web_ui_member_runner.py",
+        "line": 370,
+        "method": "agreements",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_runner.py",
+        "line": 370,
+        "method": "agreements",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "在普通 Chrome 中以网页游客身份打开 Profile，确认登录弹窗出现",
+      "分别点击 Terms of Service、Privacy Policy，读取正文后返回"
+    ],
+    "expected": [
+      "两个协议均可打开，有标题和非空正文，可返回登录入口"
+    ]
+  },
+  {
+    "id": "L-02",
+    "module": "登录",
+    "title": "Google 登录并确认实际会员状态",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 5,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 460,
+        "method": "observeLogin"
+      },
+      "android": {
+        "file": "web_ui_full_rerun.py",
+        "line": 154,
+        "method": "wait_login",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_full_rerun.py",
+        "line": 154,
+        "method": "wait_login",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "从 Profile 登录弹窗点击 Continue with Google",
+      "优先选择已有指定 Google 账号；需要凭据时由交互输入，不保存凭据",
+      "完成回调后立即观察Chat新老用户窗口，并刷新Profile核对账号及实际会员卡片"
+    ],
+    "expected": [
+      "返回被测站点，Profile 显示已登录身份；Premium Member与Active until有效期表示已订阅，Upgrade to Premium表示未订阅，无法确认则阻塞关联项"
+    ]
+  },
+  {
+    "id": "L-03",
+    "module": "Discover",
+    "title": "已登录 Discover 存在用户卡片",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 6,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 711
+        }
+      },
+      "android": {
+        "file": "web_ui_member_suite.py",
+        "line": 109,
+        "method": "discover",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_suite.py",
+        "line": 109,
+        "method": "discover",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "确认已登录未订阅，打开 Discover",
+      "检查卡片内容及用户操作入口"
+    ],
+    "expected": [
+      "至少一张用户卡片可见，图片、用户信息和操作入口可识别"
+    ]
+  },
+  {
+    "id": "L-04",
+    "module": "来电",
+    "title": "新注册三分钟内收到来电并取消",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 7,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 519,
+        "method": "incoming",
+        "case_override": {
+          "title": "新用户接听首次欢迎来电",
+          "steps": [
+            "登录后同步观察Chat的Official消息和欢迎来电，任一正证据确认新用户",
+            "首次来电捕获后立即点击Join/Answer，不等待第二次来电",
+            "确认来电弹窗关闭且视频实际加载，保存证据并退出通话"
+          ],
+          "expected": [
+            "新用户三分钟内出现欢迎来电，接听首次来电后进入视频界面；老用户跳过"
+          ]
+        }
+      },
+      "android": {
+        "file": "web_ui_exception_rerun.py",
+        "line": 13,
+        "method": "incoming_cases",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_exception_rerun.py",
+        "line": 13,
+        "method": "incoming_cases",
+        "platform": "ios"
+      }
+    },
+    "requires": [
+      "从未登录状态启动L-02观察；登录后三分钟连续执行；不能用旧登录追溯"
+    ],
+    "steps": [
+      "真实登录成功后立即进入Chat，30秒内出现teamoffice消息则认定新用户，无消息则为老用户；错过窗口不得追溯",
+      "新用户在登录后三分钟窗口内观察来电，首次点击取消"
+    ],
+    "expected": [
+      "新用户三分钟内出现模拟视频来电，点击取消后消息关闭且页面可操作；老用户跳过本项"
+    ]
+  },
+  {
+    "id": "L-05",
+    "module": "来电",
+    "title": "新注册第二次来电接听",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 8,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 519,
+        "method": "incoming",
+        "status": "PC已移除；Android/iOS继续保留"
+      },
+      "android": {
+        "file": "web_ui_exception_rerun.py",
+        "line": 13,
+        "method": "incoming_cases",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_exception_rerun.py",
+        "line": 13,
+        "method": "incoming_cases",
+        "platform": "ios"
+      }
+    },
+    "requires": [
+      "从未登录状态启动L-02观察；登录后三分钟连续执行；不能用旧登录追溯"
+    ],
+    "steps": [
+      "沿用本次登录后30秒Chat的teamoffice新用户判定，不重复登录或重新计时",
+      "完成首次来电取消后，再次来电时点击接听"
+    ],
+    "expected": [
+      "第二次消息出现，接听后进入对应通话界面；老用户跳过；未收到第二次来电则记录等待范围与阻塞"
+    ]
+  },
+  {
+    "id": "L-06",
+    "module": "来电",
+    "title": "非新注册用户无欢迎来电",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 9,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 519,
+        "method": "incoming",
+        "case_override": {
+          "steps": [
+            "Official有消息或欢迎来电视为新用户，本项跳过",
+            "只有完整30秒未发现Official消息的老用户继续观察三分钟"
+          ],
+          "expected": [
+            "仅老用户执行；观察窗口内没有新注册欢迎来电"
+          ]
+        }
+      },
+      "android": {
+        "file": "web_ui_exception_rerun.py",
+        "line": 13,
+        "method": "incoming_cases",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_exception_rerun.py",
+        "line": 13,
+        "method": "incoming_cases",
+        "platform": "ios"
+      }
+    },
+    "requires": [
+      "从未登录状态启动L-02观察；登录后三分钟连续执行；不能用旧登录追溯"
+    ],
+    "steps": [
+      "登录后完整观察Chat三十秒无teamoffice消息，按老用户处理",
+      "登录后在前台连续观察三分钟，记录观察起止"
+    ],
+    "expected": [
+      "观察窗口内不出现新注册欢迎视频来电；不据此推断无限时段行为"
+    ]
+  },
+  {
+    "id": "L-07",
+    "module": "Discover",
+    "title": "Say Hi 成功下落通知",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 10,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 214,
+        "method": "sayHiOnce"
+      },
+      "android": {
+        "file": "web_ui_member_suite.py",
+        "line": 258,
+        "method": "sayhi",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_suite.py",
+        "line": 258,
+        "method": "sayhi",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "选择尚未打招呼且可用额度大于零的用户，记录目标",
+      "点击 Say Hi，立即采集通知和按钮状态"
+    ],
+    "expected": [
+      "出现明确的 Say Hi 成功下落通知"
+    ]
+  },
+  {
+    "id": "L-08",
+    "module": "Discover",
+    "title": "给五个不同用户打招呼后第六次触发订阅",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 11,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 712
+        }
+      },
+      "android": {
+        "file": "web_ui_member_suite.py",
+        "line": 282,
+        "method": "quota",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_suite.py",
+        "line": 282,
+        "method": "quota",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "记录已知历史用量；未知时不猜测，以本轮五次真实成功作为可用额度证据",
+      "依次向五个不同用户发送 Say Hi，记录目标及每次结果；未满五次即被拦截时记录前置不足",
+      "刷新 Discover 等待列表加载，再向第六个未打招呼用户点击 Say Hi"
+    ],
+    "expected": [
+      "本轮前五次成功，第六次出现订阅弹窗；只有历史额度不足不能判定五次边界通过"
+    ]
+  },
+  {
+    "id": "L-09",
+    "module": "Discover",
+    "title": "卡片 Video 触发订阅",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 12,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 712
+        }
+      },
+      "android": {
+        "file": "web_ui_member_suite.py",
+        "line": 115,
+        "method": "video",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_suite.py",
+        "line": 115,
+        "method": "video",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "已登录未订阅时，在 Discover 点击用户卡片的 Video"
+    ],
+    "expected": [
+      "出现订阅弹窗"
+    ]
+  },
+  {
+    "id": "L-10",
+    "module": "订阅",
+    "title": "关闭订阅弹窗",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 13,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 712
+        }
+      },
+      "android": {
+        "file": "web_ui_member_suite.py",
+        "line": 122,
+        "method": "close_case",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_suite.py",
+        "line": 122,
+        "method": "close_case",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "通过未订阅拦截打开订阅弹窗",
+      "点击关闭按钮"
+    ],
+    "expected": [
+      "订阅弹窗消失，来源页面可继续操作"
+    ]
+  },
+  {
+    "id": "L-11",
+    "module": "Discover",
+    "title": "卡片打码标签触发订阅",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 14,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "status": "PC已移除；Android/iOS继续保留"
+      },
+      "android": {
+        "file": "web_ui_member_suite.py",
+        "line": 130,
+        "method": "masked",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_suite.py",
+        "line": 130,
+        "method": "masked",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "在 Discover 寻找具有打码标签的用户卡片",
+      "点击该打码标签"
+    ],
+    "expected": [
+      "出现订阅弹窗；不存在该标签时记录测试数据不足"
+    ]
+  },
+  {
+    "id": "L-12",
+    "module": "用户详情",
+    "title": "卡片进入用户详情",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 15,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 714
+        }
+      },
+      "android": {
+        "file": "web_ui_member_suite.py",
+        "line": 153,
+        "method": "detail_case",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_suite.py",
+        "line": 153,
+        "method": "detail_case",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "在 Discover 记录目标卡片昵称",
+      "点击卡片主体"
+    ],
+    "expected": [
+      "进入该用户详情页，用户身份与来源卡片一致"
+    ]
+  },
+  {
+    "id": "L-13",
+    "module": "用户详情",
+    "title": "详情打码标签触发订阅",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 16,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 714
+        }
+      },
+      "android": {
+        "file": "web_ui_member_suite.py",
+        "line": 130,
+        "method": "masked",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_suite.py",
+        "line": 130,
+        "method": "masked",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "进入具有打码标签的用户详情页",
+      "点击打码标签"
+    ],
+    "expected": [
+      "出现订阅弹窗"
+    ]
+  },
+  {
+    "id": "L-14",
+    "module": "用户详情",
+    "title": "更多菜单包含拉黑举报取消",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 17,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "status": "PC已移除；Android/iOS继续保留"
+      },
+      "android": {
+        "file": "web_ui_member_suite.py",
+        "line": 158,
+        "method": "menu",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_suite.py",
+        "line": 158,
+        "method": "menu",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "在详情页点击右上角更多"
+    ],
+    "expected": [
+      "出现 Block、Report、Cancel 三个操作"
+    ]
+  },
+  {
+    "id": "L-15",
+    "module": "用户详情",
+    "title": "拉黑打开二次确认",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 18,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 715
+        }
+      },
+      "android": {
+        "file": "web_ui_member_suite.py",
+        "line": 166,
+        "method": "block_dialog",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_suite.py",
+        "line": 166,
+        "method": "block_dialog",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "在详情页打开更多，点击 Block"
+    ],
+    "expected": [
+      "出现拉黑二次确认，包含确认及取消入口"
+    ]
+  },
+  {
+    "id": "L-16",
+    "module": "举报",
+    "title": "举报显示原因列表",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 19,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 715
+        }
+      },
+      "android": {
+        "file": "web_ui_member_suite.py",
+        "line": 197,
+        "method": "report_reasons",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_suite.py",
+        "line": 197,
+        "method": "report_reasons",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "在详情页打开更多，点击 Report"
+    ],
+    "expected": [
+      "出现非空的举报原因列表"
+    ]
+  },
+  {
+    "id": "L-17",
+    "module": "举报",
+    "title": "提交举报显示成功通知",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 20,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 715
+        }
+      },
+      "android": {
+        "file": "web_ui_member_suite.py",
+        "line": 205,
+        "method": "report_submit",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_suite.py",
+        "line": 205,
+        "method": "report_submit",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "在测试用户详情打开举报原因列表",
+      "点击任意一个原因，按界面要求完成提交"
+    ],
+    "expected": [
+      "出现举报成功 Toast；记录所选原因"
+    ]
+  },
+  {
+    "id": "L-18",
+    "module": "拉黑",
+    "title": "取消拉黑二次确认",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 21,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 715
+        }
+      },
+      "android": {
+        "file": "web_ui_member_suite.py",
+        "line": 175,
+        "method": "block_cancel",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_suite.py",
+        "line": 175,
+        "method": "block_cancel",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "在详情更多菜单选择 Block，打开二次确认",
+      "点击取消"
+    ],
+    "expected": [
+      "二次确认关闭，仍可查看原用户详情"
+    ]
+  },
+  {
+    "id": "L-19",
+    "module": "拉黑",
+    "title": "确认拉黑显示成功通知",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 22,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 715
+        }
+      },
+      "android": {
+        "file": "web_ui_member_suite.py",
+        "line": 212,
+        "method": "block_submit",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_suite.py",
+        "line": 212,
+        "method": "block_submit",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "在完成目标用户的轮播、返回和举报检查后，打开拉黑二次确认",
+      "点击确认"
+    ],
+    "expected": [
+      "出现拉黑成功 Toast；记录目标及实际页面变化"
+    ]
+  },
+  {
+    "id": "L-20",
+    "module": "轮播与返回",
+    "title": "多图自动轮播",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 23,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "status": "PC已移除；Android/iOS继续保留"
+      },
+      "android": {
+        "file": "web_ui_member_suite.py",
+        "line": 222,
+        "method": "carousel",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_suite.py",
+        "line": 222,
+        "method": "carousel",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "进入具有至少两张资料图片的详情，记录实际图片数量",
+      "不手动滑动，连续观察至少两次图片自动切换，记录实测间隔"
+    ],
+    "expected": [
+      "多张图片能够自动轮播，3秒间隔可接受，不要求固定4秒；无多图数据时阻塞"
+    ]
+  },
+  {
+    "id": "L-21",
+    "module": "轮播与返回",
+    "title": "单图不轮播",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 24,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 716
+        }
+      },
+      "android": {
+        "file": "web_ui_member_suite.py",
+        "line": 222,
+        "method": "carousel",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_suite.py",
+        "line": 222,
+        "method": "carousel",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "进入仅一张资料图片的详情，确认图片数量",
+      "前台观察至少八秒，记录图片及指示器"
+    ],
+    "expected": [
+      "图片保持该用户唯一资料图片，不出现空白或轮播跳动；无单图数据时阻塞"
+    ]
+  },
+  {
+    "id": "L-22",
+    "module": "轮播与返回",
+    "title": "详情返回来源页面",
+    "definition": {
+      "file": "web_ui_member_cases.py",
+      "line": 25,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 716
+        }
+      },
+      "android": {
+        "file": "web_ui_member_suite.py",
+        "line": 248,
+        "method": "back_case",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_member_suite.py",
+        "line": 248,
+        "method": "back_case",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "从 Discover 记录目标卡片并进入详情",
+      "点击详情返回"
+    ],
+    "expected": [
+      "返回 Discover 来源页面，可继续浏览和打开卡片"
+    ]
+  },
+  {
+    "id": "L-23",
+    "module": "个人资料",
+    "title": "随机英文昵称保存及回显",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 8,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 717
+        }
+      },
+      "android": {
+        "file": "web_ui_extended_suite.py",
+        "line": 174,
+        "method": "nickname",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_extended_suite.py",
+        "line": 174,
+        "method": "nickname",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "记录当前昵称，点击 Edit Info",
+      "填写随机英文姓名并保存",
+      "返回 Profile，并刷新再次核对"
+    ],
+    "expected": [
+      "保存成功，Profile 和刷新后的昵称均等于本次输入"
+    ]
+  },
+  {
+    "id": "L-24",
+    "module": "个人资料",
+    "title": "随机英文励志签名保存及回显",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 9,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 717
+        }
+      },
+      "android": {
+        "file": "web_ui_extended_suite.py",
+        "line": 197,
+        "method": "signature",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_extended_suite.py",
+        "line": 197,
+        "method": "signature",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "点击 About Me 的 Edit",
+      "输入随机英文励志短语并保存",
+      "返回 Profile，并刷新再次核对"
+    ],
+    "expected": [
+      "保存成功，Profile 和刷新后的签名均等于本次输入"
+    ]
+  },
+  {
+    "id": "L-25",
+    "module": "个人资料",
+    "title": "选择标签高亮及计数增加",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 10,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 717
+        },
+        "case_override": {
+          "title": "选择标签并逐次等待接口保存",
+          "steps": [
+            "进入Profile，记录未选标签和当前n/6计数",
+            "点击一个标签，确认对应保存接口请求完成且HTTP成功，核对高亮和计数增加",
+            "两次点击至少间隔1.5秒；上一请求未完成不点击下一项",
+            "刷新Profile，确认已选择标签与计数仍然保持"
+          ],
+          "expected": [
+            "每次点击均有对应保存请求；逐次完成后标签高亮、计数正确增加，刷新后保存成功"
+          ]
+        }
+      },
+      "android": {
+        "file": "web_ui_extended_suite.py",
+        "line": 233,
+        "method": "tags_select",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_extended_suite.py",
+        "line": 233,
+        "method": "tags_select",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "记录已选标签和 n/6",
+      "点击未选择的标签，逐次核对样式及计数"
+    ],
+    "expected": [
+      "每选择一个标签高亮，计数增加一，最多六个"
+    ]
+  },
+  {
+    "id": "L-26",
+    "module": "个人资料",
+    "title": "取消标签及计数减少",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 11,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 717
+        }
+      },
+      "android": {
+        "file": "web_ui_extended_suite.py",
+        "line": 263,
+        "method": "tags_cancel",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_extended_suite.py",
+        "line": 263,
+        "method": "tags_cancel",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "点击本轮已选择的标签，逐次核对样式及计数"
+    ],
+    "expected": [
+      "取消后标签恢复未选中样式，计数减少一"
+    ]
+  },
+  {
+    "id": "L-27",
+    "module": "个人资料",
+    "title": "未订阅点击订阅卡片",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 12,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 718
+        }
+      },
+      "android": {
+        "file": "web_ui_extended_suite.py",
+        "line": 282,
+        "method": "premium_entry",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_extended_suite.py",
+        "line": 282,
+        "method": "premium_entry",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "确认 Profile 显示 Upgrade to Premium",
+      "点击订阅卡片"
+    ],
+    "expected": [
+      "出现 Get Premium 订阅弹窗"
+    ]
+  },
+  {
+    "id": "L-28",
+    "module": "个人资料",
+    "title": "订阅弹窗返回来源页",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 13,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 718
+        }
+      },
+      "android": {
+        "file": "web_ui_extended_suite.py",
+        "line": 287,
+        "method": "premium_return",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_extended_suite.py",
+        "line": 287,
+        "method": "premium_return",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "从 Profile 打开订阅弹窗",
+      "点击返回或关闭入口"
+    ],
+    "expected": [
+      "弹窗关闭，返回 Profile 来源页"
+    ]
+  },
+  {
+    "id": "L-29",
+    "module": "个人资料",
+    "title": "未订阅点击金币入口",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 14,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 719
+        }
+      },
+      "android": {
+        "file": "web_ui_extended_suite.py",
+        "line": 295,
+        "method": "gems_unsubscribed",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_extended_suite.py",
+        "line": 295,
+        "method": "gems_unsubscribed",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "确认未订阅，记录金币余额",
+      "点击 Profile 的金币入口"
+    ],
+    "expected": [
+      "出现订阅弹窗"
+    ]
+  },
+  {
+    "id": "L-30",
+    "module": "个人资料",
+    "title": "订阅套餐档位切换",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 15,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 720
+        }
+      },
+      "android": {
+        "file": "web_ui_extended_suite.py",
+        "line": 302,
+        "method": "tiers",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_extended_suite.py",
+        "line": 302,
+        "method": "tiers",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "打开订阅弹窗",
+      "依次切换 Week、Month、3 Months，记录选中态和支付按钮金额"
+    ],
+    "expected": [
+      "选中态随点击变化，套餐及支付按钮对应，页面无异常"
+    ]
+  },
+  {
+    "id": "N-01",
+    "module": "已登录 Match 权限",
+    "title": "拒绝音视频权限",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 16,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "status": "PC已移除；Android/iOS继续保留"
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 217,
+        "method": "permissions",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 217,
+        "method": "permissions",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "确认已登录未订阅，进入 Match 并触发首次音视频权限请求",
+      "点击不允许"
+    ],
+    "expected": [
+      "出现开启权限说明及 Try Again；已有授权不能代替拒绝实测"
+    ]
+  },
+  {
+    "id": "N-02",
+    "module": "已登录 Match 权限",
+    "title": "Try Again 刷新并重新申请",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 17,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 722
+        },
+        "case_override": {
+          "title": "PC权限说明点击Enjoy完成引导",
+          "steps": [
+            "在PC权限说明中按可见步骤点击How Can I Provide Permission?及Next",
+            "点击Enjoy，等待说明关闭并检查Match恢复可操作"
+          ],
+          "expected": [
+            "点击Enjoy完成PC权限说明；不要求Try Again；关闭引导不代表音视频已经授权"
+          ]
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 217,
+        "method": "permissions",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 217,
+        "method": "permissions",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "在拒绝提示中点击 Try Again",
+      "核对页面重载及新的权限请求"
+    ],
+    "expected": [
+      "页面刷新，再次出现音视频权限请求"
+    ]
+  },
+  {
+    "id": "N-03",
+    "module": "已登录 Match 权限",
+    "title": "允许权限及 Chrome 通知",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 18,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 722
+        },
+        "case_override": {
+          "title": "PC匹配确认音视频已授权",
+          "steps": [
+            "进入PC Match并点击Start matching",
+            "检查实际进入匹配连接页或视频会话，保存页面证据"
+          ],
+          "expected": [
+            "实际进入匹配连接页或视频会话证明音视频权限已授权；不要求捕获浏览器下落通知"
+          ]
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 217,
+        "method": "permissions",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 217,
+        "method": "permissions",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "在权限请求中点击允许",
+      "采集浏览器顶部通知"
+    ],
+    "expected": [
+      "显示已允许摄像头和麦克风的浏览器通知"
+    ]
+  },
+  {
+    "id": "N-04",
+    "module": "已登录 Match",
+    "title": "顶部三个标签切换",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 19,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 706
+        }
+      },
+      "android": {
+        "file": "web_ui_extended_suite.py",
+        "line": 326,
+        "method": "match_tabs",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_extended_suite.py",
+        "line": 326,
+        "method": "match_tabs",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "确认已登录未订阅，进入 Match",
+      "依次点击 women、men、All"
+    ],
+    "expected": [
+      "三个选项均可选中，页面可操作"
+    ]
+  },
+  {
+    "id": "N-05",
+    "module": "已登录 Match",
+    "title": "中间 Discover 跳转",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 20,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 721
+        }
+      },
+      "android": {
+        "file": "web_ui_extended_suite.py",
+        "line": 337,
+        "method": "match_discover",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_extended_suite.py",
+        "line": 337,
+        "method": "match_discover",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "进入 Match",
+      "点击中间 Discover"
+    ],
+    "expected": [
+      "跳转 Discover 用户列表"
+    ]
+  },
+  {
+    "id": "N-06",
+    "module": "已登录 Match",
+    "title": "有免费次数时启动匹配",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 21,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 730
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 412,
+        "method": "matching_exit",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 412,
+        "method": "matching_exit",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "记录免费匹配次数，确认大于零",
+      "点击 Start matching 一次"
+    ],
+    "expected": [
+      "进入搜索或匹配连接页"
+    ]
+  },
+  {
+    "id": "N-07",
+    "module": "已登录 Match",
+    "title": "连接中 Exit 及次数减一",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 22,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 708
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 412,
+        "method": "matching_exit",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 412,
+        "method": "matching_exit",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "记录本次启动前免费次数",
+      "匹配连接中点击 Exit",
+      "返回后读取剩余次数"
+    ],
+    "expected": [
+      "退出匹配，剩余次数相对启动前减一"
+    ]
+  },
+  {
+    "id": "N-08",
+    "module": "已登录通话",
+    "title": "发送简短英文问候",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 23,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 709
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 448,
+        "method": "conversation",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 448,
+        "method": "conversation",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "匹配成功进入通话",
+      "输入随机简短英文问候并发送"
+    ],
+    "expected": [
+      "本人消息显示在会话区域；单端显示不代表对方已收信"
+    ]
+  },
+  {
+    "id": "N-09",
+    "module": "已登录通话",
+    "title": "本人小窗切换视频位置",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 24,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 731
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 448,
+        "method": "conversation",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 448,
+        "method": "conversation",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "记录通话中两路视频位置",
+      "点击本人右上角小窗"
+    ],
+    "expected": [
+      "两路视频大小及位置交换"
+    ]
+  },
+  {
+    "id": "N-10",
+    "module": "已登录通话",
+    "title": "未订阅送礼按余额判断",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 25,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 723
+        },
+        "case_override": {
+          "title": "PC未订阅送礼按余额判断",
+          "steps": [
+            "刷新Profile确认未订阅并记录金币余额",
+            "实际进入匹配连接页确认音视频已授权",
+            "通话中发送星星礼物，立即采集提示"
+          ],
+          "expected": [
+            "进入匹配连接页证明PC音视频已授权",
+            "未订阅但余额足够时发送成功并扣除礼物金额；余额不足时发送失败并提示金币不足"
+          ]
+        }
+      },
+      "android": {
+        "file": "web_ui_exception_rerun.py",
+        "line": 63,
+        "method": "unsubscribed_gift",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_exception_rerun.py",
+        "line": 63,
+        "method": "unsubscribed_gift",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "确认未订阅，记录余额和礼物价格",
+      "匹配成功后打开礼物面板并发送一个礼物",
+      "核对会话结果及实际余额变化"
+    ],
+    "expected": [
+      "未订阅但余额足够时发送成功，会话显示礼物消息并扣除对应金币；余额不足时发送失败并提示金币不足"
+    ]
+  },
+  {
+    "id": "S-01",
+    "module": "订阅支付",
+    "title": "Week 卡支付成功及增加300金币",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 26,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 724
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 887,
+        "method": "subscribe",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 887,
+        "method": "subscribe",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "完成所有未标记用例后，记录未订阅状态及原余额",
+      "选择 Week 和卡支付，在测试三方页面选择成功",
+      "等待返回被测站，核对充值成功弹窗及余额",
+      "打开 Profile 核对 Premium Member 卡片和有效期"
+    ],
+    "expected": [
+      "支付成功回站，显示成功弹窗，余额相对之前增加300；Profile 为图片所示 Premium Member 样式并显示有效期"
+    ]
+  },
+  {
+    "id": "S-04",
+    "module": "已订阅 Discover",
+    "title": "首次 Video 显示金币余额",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 27,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 725
+        },
+        "case_override": {
+          "title": "清理本站缓存后首次Video显示余额",
+          "steps": [
+            "记录当前账号主对象data.uuid，清理当前被测源的页面缓存及本地业务状态，保留设备标识和认证Cookie/IndexedDB",
+            "刷新页面，复核账号UUID相同、Profile已登录且会员有效；若退出登录先重新登录同一账号再继续",
+            "首次点击Discover的Video，保存余额弹窗和当前金币证据"
+          ],
+          "expected": [
+            "本次首次Video前完成同源缓存清理及账号/会员复核，弹出的Balance金额与当前金币一致；前置不完整时不点击Video"
+          ]
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 784,
+        "method": "first_video",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 784,
+        "method": "first_video",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "确认本轮订阅已生效且本轮尚未点击已订阅 Video",
+      "点击 Discover 用户 Video"
+    ],
+    "expected": [
+      "首次展示剩余金币金额，金额与当前余额相符"
+    ]
+  },
+  {
+    "id": "S-02",
+    "module": "金币充值",
+    "title": "已订阅金币页七个档位",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 28,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 724
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 734,
+        "method": "gem_store",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 734,
+        "method": "gem_store",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "确认 Premium Member 状态",
+      "点击 Profile 金币入口，统计充值档位"
+    ],
+    "expected": [
+      "进入金币页，展示七个可充值档位"
+    ]
+  },
+  {
+    "id": "S-03",
+    "module": "金币充值",
+    "title": "金币充值成功及余额增加",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 29,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 724
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 825,
+        "method": "topup_gems",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 825,
+        "method": "topup_gems",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "记录原余额及所选档位承诺金币数（含明确赠送）",
+      "选择一个档位并在测试三方页面选择支付成功",
+      "返回网站，核对成功通知和新余额"
+    ],
+    "expected": [
+      "出现充值成功金币 Toast，余额为原余额加本次承诺金币数"
+    ]
+  },
+  {
+    "id": "S-06",
+    "module": "已订阅 Discover",
+    "title": "余额足够拨号及主播离线切换",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 30,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 725
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 797,
+        "method": "subscribed_video_dial",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 797,
+        "method": "subscribed_video_dial",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "确认已订阅且余额满足当前显示的通话费用",
+      "点击用户 Video 进入拨号",
+      "若明确提示主播离线，换下一个用户；最多尝试三名，结束后退出"
+    ],
+    "expected": [
+      "在线目标进入拨号或通话；出现离线 Toast 时记录后换人；不无限重试"
+    ]
+  },
+  {
+    "id": "S-07",
+    "module": "已订阅通话",
+    "title": "有金币发送礼物成功",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 31,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 727
+        }
+      },
+      "android": {
+        "file": "web_ui_complete_suite.py",
+        "line": 869,
+        "method": "subscribed_gift_call",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_complete_suite.py",
+        "line": 869,
+        "method": "subscribed_gift_call",
+        "platform": "ios"
+      }
+    },
+    "requires": [],
+    "steps": [
+      "确认已订阅且余额足够，匹配成功进入通话",
+      "打开礼物面板，选择可负担礼物并发送"
+    ],
+    "expected": [
+      "发送成功，会话区显示对应礼物成功消息"
+    ]
+  },
+  {
+    "id": "S-09",
+    "module": "已订阅通话计费",
+    "title": "普通通话每分钟扣除80金币",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 32,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 726
+        },
+        "case_override": {
+          "title": "普通视频通话按分钟向上取整扣费",
+          "steps": [
+            "确认会员有效并记录通话前金币",
+            "接通普通80/min通话，记录实际通话计时（至少一分钟且不足两分钟）",
+            "正常挂断后刷新Profile，核对按分钟向上取整的扣费"
+          ],
+          "expected": [
+            "按不足一分钟算一分钟扣费；70秒应扣2×80=160金币；拨号等待不计通话时长"
+          ]
+        }
+      },
+      "android": {
+        "file": "web_ui_call_billing.py",
+        "line": 76,
+        "method": "billing_call",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_call_billing.py",
+        "line": 76,
+        "method": "billing_call",
+        "platform": "ios"
+      }
+    },
+    "requires": [
+      "test环境、实际会员有效、已完成S-04首次Video提示；普通通话80金币/分钟"
+    ],
+    "steps": [
+      "确认已订阅，记录通话前金币余额",
+      "选择没有Free免费标识的主播并接通，观察至少一分钟通话计时",
+      "结束通话，刷新Profile核对金币扣减并保存计时与余额证据"
+    ],
+    "expected": [
+      "普通通话每分钟扣除80金币；未接通不按拨号时间计费；缺少完整一分钟证据不能判通过"
+    ]
+  },
+  {
+    "id": "S-05",
+    "module": "已订阅 Discover",
+    "title": "非首次 Video 且无金币",
+    "definition": {
+      "file": "web_ui_extended_cases.py",
+      "line": 35,
+      "method": null
+    },
+    "implementation": {
+      "web": {
+        "file": "web_ui_desktop_suite.mjs",
+        "line": 700,
+        "method": "execute",
+        "dispatch": {
+          "file": "web_ui_desktop_suite.mjs",
+          "line": 725
+        },
+        "case_override": {
+          "title": "PC非首次Video且无金币",
+          "steps": [
+            "确认实际会员有效、已处理首次Video，记录余额",
+            "使用带明确价格的真实通话或礼物消费准备0金币，记录每次消费；不通过后台改金币",
+            "余额0后再次点击Discover的Video"
+          ],
+          "expected": [
+            "非首次且0金币时出现无金币提示；未达到0或未取得有效会员证据则阻塞"
+          ]
+        }
+      },
+      "android": {
+        "file": "web_ui_call_billing.py",
+        "line": 174,
+        "method": "empty_video",
+        "platform": "android"
+      },
+      "ios": {
+        "file": "web_ui_call_billing.py",
+        "line": 174,
+        "method": "empty_video",
+        "platform": "ios"
+      }
+    },
+    "requires": [
+      "test环境、实际会员有效、已完成S-04首次Video提示；普通通话80金币/分钟"
+    ],
+    "steps": [
+      "确认订阅已生效并已完成首次Video；记录当前余额",
+      "余额非零时，通过没有Free标识的真实通话按每分钟80金币消费，逐次记录时长和余额；免费通话不作为耗币前置",
+      "达到余额0后再次点击Discover的Video；消费预算用尽或无可接通主播时保留实际余额并记录阻塞"
+    ],
+    "expected": [
+      "按真实通话消费准备0金币数据，随后弹出无金币弹窗；计费与免费规则分别核验，不通过后台改余额；未能达到0时不判拦截通过"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+node_modules/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+/work/
+/web_ui/*artifacts/
+/web_ui/allure*/
+/web_ui/web_ui_chrome_profile/
+/web_ui/web_ui_agreement_cache.json
+/web_ui/web_ui_device_suffixes.jsonl
+/web_ui/device_reset_history.json
